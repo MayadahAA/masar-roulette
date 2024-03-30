@@ -75,7 +75,7 @@ const Name = localStorage.getItem("user_name");
     }
     try {
       const response = await axios.post(
-        "https://64d8b3c25f9bf5b879ce7999.mockapi.io/users",
+        "https://64d8b3c25f9bf5b879ce7999.mockapi.io/eid",
         {
           winner: winner,
           ip: userIp, // Use the fetched IP address

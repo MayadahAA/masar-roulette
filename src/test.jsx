@@ -16,7 +16,7 @@ const IPTracker = () => {
           const ipResponse = await axios.get('https://api.ipify.org?format=json');
           setUserIP(ipResponse.data.ip);
           // Check if user's IP exists in the mock API
-          const existingIPResponse = await axios.get(`https://64d8b3c25f9bf5b879ce7999.mockapi.io/users?ip=${ipResponse.data.ip}`);
+          const existingIPResponse = await axios.get(`https://64d8b3c25f9bf5b879ce7999.mockapi.io/eid?ip=${ipResponse.data.ip}`);
           if (existingIPResponse.data.length > 0) {
             setResponseMessage('Your IP already exists in the database.');
             setIpExists(true);
